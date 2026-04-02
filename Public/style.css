@@ -1,0 +1,98 @@
+:root {
+    --main-color: rgb(0, 168, 109);
+    --hover-color: rgba(0, 131, 85, 0.383);
+    --btn-radius: 12px;
+}
+
+body{
+    margin: 0%;
+    padding: 0%;   
+}
+
+body,html{
+    height: 100%;
+    overflow-x: hidden;
+}
+
+.main-heading{   
+    text-align: left;
+    font-size: 50px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+}
+
+.main-heading-a{
+    color:white;
+    text-decoration: none;
+    transition: all 0.5s;
+}
+
+.main-heading-a:hover{
+    color:var(--main-color);
+    font-size: 52px;
+    transition: all 2s;
+}
+
+.nav{
+    position: sticky;
+    z-index: 1000;
+    top:0;
+
+    background-color: rgba(0, 0, 0, 0.259);
+    border-bottom: 4px solid var(--main-color);
+    border-radius: 12px;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    backdrop-filter: blur(2px);
+
+    display: flex;
+    justify-content: space-between;
+    color:white;
+    align-items: center;   
+    padding: 30px 20px;
+}
+
+.nav-btn{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color:white;   
+    background-color: var(--main-color);
+    border:4px solid var(--main-color);
+    border-radius: 12px;
+    text-decoration: none;
+    padding:12px 24px;
+    margin-left:5px;
+    transition: all 0.5s;
+}
+
+.nav-btn:hover{
+    color:white;
+    background-color: var(--hover-color);
+    border-radius: 12px;
+    border:4px solid var(--main-color);
+    text-decoration: none;
+    transition: all 0.5s;
+    padding:12px 24px;
+}
+
+.hero{
+    position:relative;
+    height:100vh;
+    
+}
+
+.bgvideo{
+    z-index: -1;
+    position: fixed;
+    top:0;
+    left:0;
+    height:100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.content{
+    position: absolute;
+    color:white;
+    text-align: center;
+    top:40%;
+}
