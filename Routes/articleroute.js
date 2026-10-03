@@ -12,4 +12,15 @@ app.get('/articles',async (req,res)=>{
 }
 );
 
+app.get('/articles/:id',async (req,res)=>{
+    try{
+        const {id}=req.params;
+        const data= await pool.query("select * from articles where id=$1",[id]);
+        res.send(data.rows);
+    }catch(err){
+        console.log(err);
+    }
+}
+);
+
 module.exports= app;
