@@ -16,7 +16,9 @@ app.get('/articles/:id',async (req,res)=>{
     try{
         const {id}=req.params;
         const data= await pool.query("select * from articles where id=$1",[id]);
-        res.send(data.rows);
+        setTimeout(() => {
+            res.send(data.rows);
+        }, 1000);
     }catch(err){
         console.log(err);
     }
